@@ -1,0 +1,19 @@
+{
+  "name": "jobscraper-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "my-app",
+    "mcp-server",
+    "shared"
+  ],
+  "scripts": {
+    "dev:app": "npm --workspace my-app run dev",
+    "dev:mcp": "npm --workspace mcp-server run dev",
+    "build:app": "npm --workspace my-app run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
