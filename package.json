@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "workspaces": [
-    "my-app",
+    "next-app",
     "mcp-server",
     "shared"
   ],
@@ -15,5 +15,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.3"
+  }
 }

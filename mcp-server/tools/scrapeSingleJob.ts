@@ -1,8 +1,9 @@
 import { load } from "cheerio";
 import { normalizeSingleJob } from "../../shared/normalizers";
+import { fetchHTML } from "../../shared/fetchHTML";
 
-export async function scrapeSingleJob({ url }) {
-  const html = await fetch(url).then((r) => r.text());
+export async function scrapeSingleJob({ url }: { url: string }) {
+  const html = await fetchHTML(url);
   const $ = load(html);
 
   const title = $("h1").first().text().trim();
