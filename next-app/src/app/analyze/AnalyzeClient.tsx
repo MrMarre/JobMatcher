@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 export default function AnalyzeClient() {
   const [url, setUrl] = useState("");
-  const [result, setResult] = useState<any>(null);
+  const [result, setResult] = useState<any | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -33,7 +33,7 @@ export default function AnalyzeClient() {
   }
 
   return (
-    <div>
+    <div className="text-white">
       <form onSubmit={handleSubmit} className="flex gap-2 mb-4">
         <input
           className="flex-1 px-3 py-2 rounded bg-zinc-900 text-white"

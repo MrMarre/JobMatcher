@@ -1,5 +1,4 @@
-import * as iconv from "iconv-lite";
-
+import iconv from "iconv-lite";
 export async function fetchHTML(url: string): Promise<string> {
   try {
     const controller = new AbortController();
