@@ -1,7 +1,5 @@
-import { evaluateJob } from "./evaluateJob";
-import { scrapeSingleJob } from "./scrapeSingleJob";
+import { simpleEvaluate } from "./evaluateJob";
 
 export const tools = {
-  scrapeSingleJob,
-  evaluateJob,
+  simpleEvaluate,
 };

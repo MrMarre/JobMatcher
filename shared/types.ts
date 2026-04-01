@@ -5,8 +5,10 @@ export interface BaseJobListing {
   url: string;
   descriptionHtml: string;
   requirements?: string[];
+  normalizedText?: string;
   seniority?: "junior" | "mid" | "senior" | "unknown";
   tags?: string[];
+  rawText?: string;
 }
 
 export interface EvaluatedJobListing extends BaseJobListing {

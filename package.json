@@ -8,9 +8,9 @@
     "shared"
   ],
   "scripts": {
-    "dev:app": "npm --workspace my-app run dev",
+    "dev:app": "npm --workspace next-app run dev",
     "dev:mcp": "npm --workspace mcp-server run dev",
-    "build:app": "npm --workspace my-app run build",
+    "build:app": "npm --workspace next-app run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

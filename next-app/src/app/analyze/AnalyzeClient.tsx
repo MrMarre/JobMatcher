@@ -1,14 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
+import { EvaluatedJobListing } from "shared/types";
 
 export default function AnalyzeClient() {
   const [url, setUrl] = useState("");
-  const [result, setResult] = useState<any | null>(null);
+  const [result, setResult] = useState<EvaluatedJobListing | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
     setError(null);
@@ -39,6 +40,7 @@ export default function AnalyzeClient() {
           className="flex-1 px-3 py-2 rounded bg-zinc-900 text-white"
           placeholder="Enter URL for analysis..."
           value={url}
+          type="text"
           onChange={(e) => setUrl(e.target.value)}
         />
         <button
